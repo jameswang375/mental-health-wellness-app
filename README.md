@@ -2,7 +2,7 @@
 
 A full-stack mental wellness tracking application built with Next.js and Supabase. Users can log their daily mood, track exercise sessions, write journal entries, and explore evidence-based mental health education, all in one place.
 
-> **Live demo:** [mental-health-wellness-app-delta.vercel.app](mental-health-wellness-app-delta.vercel.app)
+> **Live demo:** https://mental-health-wellness-app-delta.vercel.app
 
 ---
 
@@ -15,7 +15,6 @@ A full-stack mental wellness tracking application built with Next.js and Supabas
 - **Progress** — Recharts-powered mood and exercise visualizations with 7-day, 30-day, and all-time filters. Includes a mood/exercise correlation insight.
 - **Weekly summary** — Dashboard card comparing this week's avg mood, exercise sessions, and journal entries against last week.
 - **Data export** — Download all personal data as a CSV from the profile page.
-- **Demo mode** — One-click demo that resets a shared account to clean seed data on every visit, no sign-up required.
 - **Authentication** — Email/password sign-up and login, forgot password flow with PKCE-based reset, protected routes via Next.js middleware.
 
 ---
