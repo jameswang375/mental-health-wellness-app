@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mental Health & Wellbeing App
 
-## Getting Started
+A full-stack mental wellness tracking application built with Next.js and Supabase. Users can log their daily mood, track exercise sessions, write journal entries, and explore evidence-based mental health education, all in one place.
 
-First, run the development server:
+> **Live demo:** [mental-health-wellness-app-delta.vercel.app](mental-health-wellness-app-delta.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Mood tracking** — Daily check-in with a 1–10 score and optional note. Streak tracking and weekly comparisons show progress over time.
+- **Exercise logging** — Browse a library of physical, breathing, CBT, and mindfulness exercises. Log sessions with duration and notes.
+- **Journal** — Private journaling with optional guided prompts and full-text search across past entries.
+- **Education** — Evidence-based mental health facts grouped by topic, each with peer-reviewed citations and source links.
+- **Progress** — Recharts-powered mood and exercise visualizations with 7-day, 30-day, and all-time filters. Includes a mood/exercise correlation insight.
+- **Weekly summary** — Dashboard card comparing this week's avg mood, exercise sessions, and journal entries against last week.
+- **Data export** — Download all personal data as a CSV from the profile page.
+- **Demo mode** — One-click demo that resets a shared account to clean seed data on every visit, no sign-up required.
+- **Authentication** — Email/password sign-up and login, forgot password flow with PKCE-based reset, protected routes via Next.js middleware.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 15 (App Router, Server Components, Server Actions) |
+| Language | TypeScript |
+| Database | Supabase (PostgreSQL) |
+| Auth | Supabase Auth |
+| Styling | Tailwind CSS v4 |
+| Charts | Recharts |
+| Deployment | Vercel |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Architecture Highlights
 
-## Deploy on Vercel
+- **Server Components** for all data fetching — no `useEffect` data loading, no client waterfalls
+- **Server Actions** for all mutations (`logMood`, `logExercise`, `saveJournalEntry`, `deleteAccount`, etc.)
+- **Row Level Security** on all user tables — users can only read and write their own data
+- **Middleware** for route protection — unauthenticated users are redirected before any page renders
+- **Responsive layout** — collapsible desktop sidebar + mobile slide-in drawer, managed by a shared `AppShell` client component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Preview of Dashboard
+![Dashboard](./public/app-dashboard.png)
