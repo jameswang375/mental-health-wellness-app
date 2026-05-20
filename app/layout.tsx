@@ -15,7 +15,28 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mental Health & Wellbeing",
-  description: "Your personal mental wellness companion",
+  description: "Evidence-based exercises, CBT tools, and research-backed education for your mental wellness. Track mood, journal, and build healthy habits.",
+  openGraph: {
+    title: "Mental Health & Wellbeing",
+    description: "Evidence-based exercises, CBT tools, and research-backed education for your mental wellness.",
+    url: "https://mental-health-wellness-app-delta.vercel.app",
+    siteName: "Mental Health & Wellbeing",
+    images: [
+      {
+        url: "/app-dashboard.png",
+        width: 1600,
+        height: 900,
+        alt: "Mental Health & Wellbeing App Dashboard",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mental Health & Wellbeing",
+    description: "Evidence-based exercises, CBT tools, and research-backed education for your mental wellness.",
+    images: ["/app-dashboard.png"],
+  },
 };
 
 export default function RootLayout({

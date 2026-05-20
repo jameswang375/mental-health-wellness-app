@@ -23,8 +23,8 @@ export default function QuickStats({ moodCount, exerciseCount, journalCount, str
         <Card key={stat.label}>
           <CardContent className="pt-4">
             <div className="text-2xl mb-1">{stat.icon}</div>
-            <div className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{stat.label}</div>
+            <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+            <div className="text-xs text-gray-500 mt-0.5">{stat.label}</div>
           </CardContent>
         </Card>
       ))}

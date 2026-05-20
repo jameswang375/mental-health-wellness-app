@@ -66,7 +66,7 @@ export default function NewEntryForm({ prompts, onSaved }: NewEntryFormProps) {
         onChange={e => setContent(e.target.value)}
         rows={7}
         placeholder="Write your thoughts here…"
-        className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+        className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
       />
 
       {error && <p className="text-sm text-red-600">{error}</p>}

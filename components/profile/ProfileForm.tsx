@@ -58,7 +58,7 @@ export default function ProfileForm({ profile }: ProfileFormProps) {
           value={displayName}
           onChange={e => setDisplayName(e.target.value)}
           placeholder="Your name"
-          className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

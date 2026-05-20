@@ -35,12 +35,12 @@ export default function JournalEntryCard({ entry }: JournalEntryCardProps) {
             &ldquo;{entry.prompt_text}&rdquo;
           </p>
         )}
-        <p className={`text-sm text-gray-700 dark:text-gray-300 leading-relaxed ${expanded ? '' : 'line-clamp-4'}`}>
+        <p className={`text-sm text-gray-700 leading-relaxed ${expanded ? '' : 'line-clamp-4'}`}>
           {entry.content}
         </p>
         <div className="flex items-center justify-between mt-3">
           <div className="flex items-center gap-3">
-            <span className="text-xs text-gray-400 dark:text-gray-500">{formatDate(entry.created_at)}</span>
+            <span className="text-xs text-gray-400">{formatDate(entry.created_at)}</span>
             {entry.content.length > 200 && (
               <button
                 onClick={() => setExpanded(!expanded)}

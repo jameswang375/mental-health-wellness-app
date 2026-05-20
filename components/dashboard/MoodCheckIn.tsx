@@ -41,7 +41,7 @@ export default function MoodCheckIn() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <div className="flex items-center justify-between mb-2">
-          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">How are you feeling?</label>
+          <label className="text-sm font-medium text-gray-700">How are you feeling?</label>
           <span className="text-sm font-semibold" style={{ color: getMoodColor(score) }}>
             {score}/10 — {getMoodLabel(score)}
           </span>
@@ -64,7 +64,7 @@ export default function MoodCheckIn() {
         onChange={e => setNote(e.target.value)}
         rows={2}
         placeholder="Anything on your mind? (optional)"
-        className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
       />
       {error && <p className="text-sm text-red-600">{error}</p>}
       <Button type="submit" disabled={loading}>
