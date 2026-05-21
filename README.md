@@ -39,7 +39,6 @@ A full-stack mental wellness tracking application built with Next.js and Supabas
 - **Server Actions** for all mutations (`logMood`, `logExercise`, `saveJournalEntry`, `deleteAccount`, etc.)
 - **Row Level Security** on all user tables — users can only read and write their own data
 - **Middleware** for route protection — unauthenticated users are redirected before any page renders
-- **Responsive layout** — collapsible desktop sidebar + mobile slide-in drawer, managed by a shared `AppShell` client component
 
 
 ## Preview of Dashboard

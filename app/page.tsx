@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import TryDemoButton from '@/components/TryDemoButton'
 import AccountDeletedBanner from '@/components/AccountDeletedBanner'
 
@@ -40,20 +39,6 @@ export default function LandingPage() {
           </Link>
         </p>
       </section>
-
-      {/* Dashboard preview */}
-      <div className="max-w-5xl mx-auto px-8 pb-16">
-        <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
-          <Image
-            src="/app-dashboard.png"
-            alt="App dashboard preview"
-            width={1600}
-            height={900}
-            className="w-full h-auto"
-            priority
-          />
-        </div>
-      </div>
 
       <section className="max-w-5xl mx-auto px-8 pb-24 grid md:grid-cols-3 gap-6">
         {[
