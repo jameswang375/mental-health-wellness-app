@@ -37,7 +37,7 @@ A full-stack mental wellness tracking application built with Next.js and Supabas
 
 Mental health data is among the most sensitive personal data that exists. Every architectural decision in this project was motivated by that.
 
-- **Server Components** No data fetching happens on the client. All data is fetched in in server components.
+- **Server Components** No data fetching happens on the client. All data is fetched in server components.
 - **Server Actions** for all mutations (`logMood`, `logExercise`, `saveJournalEntry`, `deleteAccount`, etc.).
 - **Row Level Security** on all user tables. Users can only read and write their own data.
 - **Middleware** for route protection. Unauthenticated users are redirected before any page renders.
