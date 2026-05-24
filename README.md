@@ -1,6 +1,6 @@
 # Mental Health & Wellbeing App
 
-A full-stack mental wellness application built with Next.js and Supabase. Users can log their daily mood, track exercise sessions, write journal entries, and explore evidence-based mental health education, all in one place.
+A full-stack mental health wellness application built with Next.js and Supabase. Users can log their daily mood, track exercise sessions, write journal entries, and explore evidence-based mental health education, all in one place.
 
 > **Live demo:** <a href="https://mental-health-wellness-app-delta.vercel.app" target="_blank">mental-health-wellness-app-delta.vercel.app</a>
 
