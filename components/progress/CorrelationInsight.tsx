@@ -22,9 +22,9 @@ export default function CorrelationInsight({ moods, exercises }: CorrelationInsi
 
   if (!hasEnoughData) {
     return (
-      <div className="rounded-xl border border-teal-100 bg-teal-50 px-6 py-4">
-        <p className="text-sm text-teal-700 font-medium mb-1">Exercise & Mood Correlation</p>
-        <p className="text-sm text-teal-600">
+      <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 px-6 py-4">
+        <p className="text-sm text-teal-400 font-medium mb-1">Exercise & Mood Correlation</p>
+        <p className="text-sm text-teal-400">
           Keep logging your moods and exercises — once you have more data, we&apos;ll show you how exercises affect your mood.
         </p>
       </div>
@@ -42,9 +42,9 @@ export default function CorrelationInsight({ moods, exercises }: CorrelationInsi
   const isSignificantBoost = diff >= 0.5
 
   return (
-    <div className="rounded-xl border border-teal-100 bg-teal-50 px-6 py-4">
-      <p className="text-sm text-teal-700 font-medium mb-1">Exercises & Mood Correlation</p>
-      <p className="text-sm text-teal-700">
+    <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 px-6 py-4">
+      <p className="text-sm text-teal-400 font-medium mb-1">Exercises & Mood Correlation</p>
+      <p className="text-sm text-teal-400">
         On days you exercised your avg mood was{' '}
         <span className="font-semibold">{avgWithExercise}/10</span>{' '}
         vs{' '}

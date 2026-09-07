@@ -52,7 +52,7 @@ export default function ExerciseFilters({ activeCategory, activeSubcategory }: E
               'px-4 py-1.5 rounded-full text-sm font-medium transition-colors',
               (activeCategory ?? '') === value
                 ? 'bg-teal-600 text-white'
-                : 'bg-white border border-gray-300 text-gray-600 hover:bg-gray-50'
+                : 'bg-gray-900 border border-gray-700 text-gray-400 hover:bg-gray-800'
             )}
           >
             {label}
@@ -67,8 +67,8 @@ export default function ExerciseFilters({ activeCategory, activeSubcategory }: E
             className={cn(
               'px-3 py-1 rounded-full text-xs font-medium transition-colors',
               (activeSubcategory ?? '') === value
-                ? 'bg-gray-800 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'bg-teal-600 text-white'
+                : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
             )}
           >
             {label}

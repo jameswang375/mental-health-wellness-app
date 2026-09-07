@@ -11,7 +11,7 @@ interface TryDemoButtonProps {
 
 export default function TryDemoButton({
   className = '',
-  label = '✨ Try the demo',
+  label = 'Try the demo',
 }: TryDemoButtonProps) {
   const router = useRouter()
   const supabase = createClient()

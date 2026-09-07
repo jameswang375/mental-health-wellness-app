@@ -36,40 +36,40 @@ export default function LogExerciseModal({ exercise, onClose }: LogExerciseModal
 
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl shadow-xl w-full max-w-md">
-        <div className="px-6 py-4 border-b border-gray-100">
-          <h2 className="font-semibold text-gray-900">Log Exercise</h2>
-          <p className="text-sm text-gray-500">{exercise.title}</p>
+      <div className="bg-gray-900 rounded-xl shadow-xl w-full max-w-md">
+        <div className="px-6 py-4 border-b border-gray-800">
+          <h2 className="font-semibold text-white">Log Exercise</h2>
+          <p className="text-sm text-gray-400">{exercise.title}</p>
         </div>
 
         {done ? (
           <div className="px-6 py-8 text-center">
-            <p className="text-teal-600 font-medium mb-4">Exercise logged!</p>
+            <p className="text-teal-400 font-medium mb-4">Exercise logged!</p>
             <Button onClick={onClose}>Done</Button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="px-6 py-4 space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Duration (minutes)</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Duration (minutes)</label>
               <input
                 type="number"
                 min={1}
                 value={duration}
                 onChange={e => setDuration(Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Notes (optional)</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Notes (optional)</label>
               <textarea
                 value={notes}
                 onChange={e => setNotes(e.target.value)}
                 rows={3}
                 placeholder="How did it feel?"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+                className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
               />
             </div>
-            {error && <p className="text-sm text-red-600">{error}</p>}
+            {error && <p className="text-sm text-red-400">{error}</p>}
             <div className="flex gap-3 pt-2">
               <Button type="button" variant="secondary" onClick={onClose} className="flex-1">
                 Cancel

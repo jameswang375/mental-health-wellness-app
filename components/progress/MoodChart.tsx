@@ -21,17 +21,17 @@ export default function MoodChart({ logs }: MoodChartProps) {
     }))
 
   if (data.length === 0) {
-    return <p className="text-sm text-gray-400 text-center py-8">No mood logs yet.</p>
+    return <p className="text-sm text-gray-500 text-center py-8">No mood logs yet.</p>
   }
 
   return (
     <ResponsiveContainer width="100%" height={220}>
       <LineChart data={data} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-        <XAxis dataKey="date" tick={{ fontSize: 11 }} />
-        <YAxis domain={[1, 10]} tick={{ fontSize: 11 }} />
+        <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+        <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#9ca3af' }} />
+        <YAxis domain={[1, 10]} tick={{ fontSize: 11, fill: '#9ca3af' }} />
         <Tooltip
-          contentStyle={{ fontSize: 12, borderRadius: 8 }}
+          contentStyle={{ fontSize: 12, borderRadius: 8, backgroundColor: '#111827', border: '1px solid #374151', color: '#e5e7eb' }}
           formatter={(value) => [value, 'Mood']}
         />
         <Line

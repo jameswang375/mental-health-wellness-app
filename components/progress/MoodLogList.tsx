@@ -24,17 +24,17 @@ export default function MoodLogList({ logs }: MoodLogListProps) {
   if (!logs.length) return null
 
   return (
-    <div className="divide-y divide-gray-50">
+    <div className="divide-y divide-gray-800">
       {logs.map(log => (
         <div key={log.id} className="px-6 py-3 flex items-center justify-between">
           <div>
-            <span className="text-sm font-semibold text-gray-900">{log.score}/10</span>
+            <span className="text-sm font-semibold text-white">{log.score}/10</span>
             {log.note && (
-              <span className="text-sm text-gray-500 ml-3 italic">&ldquo;{log.note}&rdquo;</span>
+              <span className="text-sm text-gray-400 ml-3 italic">&ldquo;{log.note}&rdquo;</span>
             )}
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-xs text-gray-400">
+            <span className="text-xs text-gray-500">
               {new Date(log.logged_at).toLocaleDateString('en-US', {
                 month: 'short',
                 day: 'numeric',
@@ -44,7 +44,7 @@ export default function MoodLogList({ logs }: MoodLogListProps) {
             </span>
             <button
               onClick={() => handleDelete(log.id)}
-              className="text-gray-400 hover:text-red-500 transition-colors"
+              className="text-gray-500 hover:text-red-400 transition-colors"
               aria-label="Delete mood log"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

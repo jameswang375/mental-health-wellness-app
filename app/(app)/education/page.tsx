@@ -12,17 +12,17 @@ export default async function EducationPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-10">
       <div>
-        <h1 className="text-2xl font-semibold text-gray-900">Learn</h1>
-        <p className="text-gray-500 text-sm mt-1">
+        <h1 className="text-2xl font-semibold text-white">Learn</h1>
+        <p className="text-gray-400 text-sm mt-1">
           Evidence-based findings on mental health and wellness — each one backed by peer-reviewed research.
-          Click <span className="text-teal-600 font-medium">Why?</span> to read the context, and{' '}
-          <span className="text-gray-500 font-medium">Source →</span> to read the original paper.
+          Click <span className="text-teal-400 font-medium">Why?</span> to read the context, and{' '}
+          <span className="text-gray-400 font-medium">Source →</span> to read the original paper.
         </p>
       </div>
 
       {topics.map(topic => (
         <section key={topic}>
-          <h2 className="text-base font-semibold text-gray-900 mb-4 flex items-center gap-2">
+          <h2 className="text-base font-semibold text-white mb-4 flex items-center gap-2">
             {topicIcon(topic)}
             {topic}
           </h2>
@@ -35,7 +35,7 @@ export default async function EducationPage() {
       ))}
 
       {allFacts.length === 0 && (
-        <p className="text-center text-sm text-gray-400 py-12">No facts yet.</p>
+        <p className="text-center text-sm text-gray-500 py-12">No facts yet.</p>
       )}
     </div>
   )

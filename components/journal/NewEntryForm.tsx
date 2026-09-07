@@ -45,12 +45,12 @@ export default function NewEntryForm({ prompts, onSaved }: NewEntryFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       {selectedPrompt ? (
-        <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
-          <p className="text-sm text-teal-800 italic">&ldquo;{selectedPrompt.text}&rdquo;</p>
+        <div className="bg-teal-500/10 border border-teal-500/30 rounded-lg p-4">
+          <p className="text-sm text-teal-300 italic">&ldquo;{selectedPrompt.text}&rdquo;</p>
           <button
             type="button"
             onClick={() => setSelectedPrompt(null)}
-            className="text-xs text-teal-600 mt-2 hover:underline"
+            className="text-xs text-teal-400 mt-2 hover:underline"
           >
             Remove prompt
           </button>
@@ -66,10 +66,10 @@ export default function NewEntryForm({ prompts, onSaved }: NewEntryFormProps) {
         onChange={e => setContent(e.target.value)}
         rows={7}
         placeholder="Write your thoughts here…"
-        className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+        className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
       />
 
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-red-400">{error}</p>}
 
       <Button type="submit" disabled={loading || !content.trim()}>
         {loading ? 'Saving…' : 'Save Entry'}

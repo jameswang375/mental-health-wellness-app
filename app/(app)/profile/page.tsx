@@ -21,17 +21,17 @@ export default async function ProfilePage() {
   return (
     <div className="max-w-xl mx-auto space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-gray-900">Profile</h1>
-        <p className="text-gray-500 text-sm mt-1">Manage your account and wellness goals.</p>
+        <h1 className="text-2xl font-semibold text-white">Profile</h1>
+        <p className="text-gray-400 text-sm mt-1">Manage your account and wellness goals.</p>
       </div>
 
       <Card>
         <CardHeader>
-          <h2 className="font-semibold text-gray-900">Your Info</h2>
+          <h2 className="font-semibold text-white">Your Info</h2>
         </CardHeader>
         <CardContent>
-          <div className="mb-4 text-sm text-gray-500">
-            <span className="font-medium text-gray-700">Email: </span>{user!.email}
+          <div className="mb-4 text-sm text-gray-400">
+            <span className="font-medium text-gray-300">Email: </span>{user!.email}
           </div>
           <ProfileForm profile={profile as Profile | null} />
         </CardContent>
@@ -39,10 +39,10 @@ export default async function ProfilePage() {
 
       <Card>
         <CardHeader>
-          <h2 className="font-semibold text-gray-900">Your Data</h2>
+          <h2 className="font-semibold text-white">Your Data</h2>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-gray-400 mb-4">
             Download all your mood logs, exercise logs, and journal entries as a CSV file.
           </p>
           <ExportButton />
@@ -51,7 +51,7 @@ export default async function ProfilePage() {
 
       <Card>
         <CardContent className="pt-6">
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-gray-400 mb-4">
             Permanently delete your account and all associated data. This cannot be undone.
           </p>
           <DeleteAccountButton />

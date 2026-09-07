@@ -52,18 +52,18 @@ export default function ProfileForm({ profile }: ProfileFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Display name</label>
+        <label className="block text-sm font-medium text-gray-300 mb-1">Display name</label>
         <input
           type="text"
           value={displayName}
           onChange={e => setDisplayName(e.target.value)}
           placeholder="Your name"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">Wellness goals</label>
+        <label className="block text-sm font-medium text-gray-300 mb-2">Wellness goals</label>
         <div className="flex flex-wrap gap-2">
           {GOAL_OPTIONS.map(goal => (
             <button
@@ -73,7 +73,7 @@ export default function ProfileForm({ profile }: ProfileFormProps) {
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 goals.includes(goal)
                   ? 'bg-teal-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
               }`}
             >
               {goal}
@@ -82,7 +82,7 @@ export default function ProfileForm({ profile }: ProfileFormProps) {
         </div>
       </div>
 
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-red-400">{error}</p>}
 
       <Button type="submit" disabled={saving}>
         {saving ? 'Saving…' : saved ? 'Saved!' : 'Save changes'}

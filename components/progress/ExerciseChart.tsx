@@ -26,17 +26,17 @@ export default function ExerciseChart({ logs }: ExerciseChartProps) {
     }))
 
   if (data.length === 0) {
-    return <p className="text-sm text-gray-400 text-center py-8">No exercise logs yet.</p>
+    return <p className="text-sm text-gray-500 text-center py-8">No exercise logs yet.</p>
   }
 
   return (
     <ResponsiveContainer width="100%" height={220}>
       <BarChart data={data} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-        <XAxis dataKey="date" tick={{ fontSize: 11 }} />
-        <YAxis tick={{ fontSize: 11 }} unit="m" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+        <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#9ca3af' }} />
+        <YAxis tick={{ fontSize: 11, fill: '#9ca3af' }} unit="m" />
         <Tooltip
-          contentStyle={{ fontSize: 12, borderRadius: 8 }}
+          contentStyle={{ fontSize: 12, borderRadius: 8, backgroundColor: '#111827', border: '1px solid #374151', color: '#e5e7eb' }}
           formatter={(value) => [`${value} min`, 'Exercise']}
         />
         <Bar dataKey="minutes" fill="#0d9488" radius={[4, 4, 0, 0]} />

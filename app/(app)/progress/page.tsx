@@ -71,8 +71,8 @@ export default async function ProgressPage({
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
-          <h1 className="text-2xl font-semibold text-gray-900">Progress</h1>
-          <p className="text-gray-500 text-sm mt-1">{rangeLabel} · Your mood and activity.</p>
+          <h1 className="text-2xl font-semibold text-white">Progress</h1>
+          <p className="text-gray-400 text-sm mt-1">{rangeLabel} · Your mood and activity.</p>
         </div>
         <TimeFilter current={range} />
       </div>
@@ -85,9 +85,9 @@ export default async function ProgressPage({
           { label: 'Exercise sessions', value: exercises.length },
           { label: 'Total minutes', value: totalMinutes > 0 ? `${totalMinutes}m` : '—' },
         ].map(({ label, value }) => (
-          <div key={label} className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-            <p className="text-2xl font-bold text-gray-900">{value}</p>
-            <p className="text-xs text-gray-500 mt-0.5">{label}</p>
+          <div key={label} className="bg-gray-900 rounded-xl border border-gray-800 p-4 shadow-sm">
+            <p className="text-2xl font-bold text-white">{value}</p>
+            <p className="text-xs text-gray-400 mt-0.5">{label}</p>
           </div>
         ))}
       </div>
@@ -98,8 +98,8 @@ export default async function ProgressPage({
       {/* Mood chart */}
       <Card>
         <CardHeader>
-          <h2 className="font-semibold text-gray-900">Mood Over Time</h2>
-          <p className="text-xs text-gray-400 mt-0.5">{rangeLabel}</p>
+          <h2 className="font-semibold text-white">Mood Over Time</h2>
+          <p className="text-xs text-gray-500 mt-0.5">{rangeLabel}</p>
         </CardHeader>
         <CardContent>
           <MoodChart logs={moods} />
@@ -109,8 +109,8 @@ export default async function ProgressPage({
       {/* Exercise chart */}
       <Card>
         <CardHeader>
-          <h2 className="font-semibold text-gray-900">Exercise Activity</h2>
-          <p className="text-xs text-gray-400 mt-0.5">Minutes per day, last 14 days</p>
+          <h2 className="font-semibold text-white">Exercise Activity</h2>
+          <p className="text-xs text-gray-500 mt-0.5">Minutes per day, last 14 days</p>
         </CardHeader>
         <CardContent>
           <ExerciseChart logs={exercises} />
@@ -121,7 +121,7 @@ export default async function ProgressPage({
       {moods.length > 0 && (
         <Card>
           <CardHeader>
-            <h2 className="font-semibold text-gray-900">Mood Log</h2>
+            <h2 className="font-semibold text-white">Mood Log</h2>
           </CardHeader>
           <CardContent className="p-0">
             <MoodLogList logs={moods} />

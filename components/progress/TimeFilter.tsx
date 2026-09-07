@@ -20,7 +20,7 @@ export default function TimeFilter({ current }: TimeFilterProps) {
           className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
             current === f.value
               ? 'bg-teal-600 text-white'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
           }`}
         >
           {f.label}

@@ -28,14 +28,14 @@ export default function DeleteAccountButton() {
       {!confirming ? (
         <button
           onClick={() => setConfirming(true)}
-          className="text-sm text-red-600 hover:text-red-700 hover:underline transition-colors"
+          className="text-sm text-red-400 hover:text-red-300 hover:underline transition-colors"
         >
           Delete my account
         </button>
       ) : (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 space-y-3">
-          <p className="text-sm text-red-800 font-medium">Are you sure?</p>
-          <p className="text-xs text-red-600">
+        <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 space-y-3">
+          <p className="text-sm text-red-300 font-medium">Are you sure?</p>
+          <p className="text-xs text-red-400">
             This permanently deletes your account and all associated data, including mood logs, journal entries, and exercise history. This action cannot be undone.
           </p>
           <div className="flex gap-3">
@@ -49,12 +49,12 @@ export default function DeleteAccountButton() {
             <button
               onClick={() => setConfirming(false)}
               disabled={loading}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               Cancel
             </button>
           </div>
-          {error && <p className="text-xs text-red-600">{error}</p>}
+          {error && <p className="text-xs text-red-400">{error}</p>}
         </div>
       )}
     </div>

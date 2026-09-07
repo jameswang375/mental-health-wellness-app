@@ -40,15 +40,15 @@ export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
       />
       <div
         className={cn(
-          'fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-xl transition-transform duration-200 md:hidden flex flex-col py-6',
+          'fixed top-0 left-0 h-full w-64 bg-gray-900 z-50 shadow-xl transition-transform duration-200 md:hidden flex flex-col py-6',
           open ? 'translate-x-0' : '-translate-x-full'
         )}
       >
         <div className="px-6 mb-8 flex items-center justify-between">
-          <span className="text-base font-semibold text-teal-600 leading-tight">
+          <span className="text-base font-semibold text-teal-400 leading-tight">
             Mental Health & Wellbeing
           </span>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-400">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -62,8 +62,8 @@ export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
               className={cn(
                 'flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
                 pathname === href
-                  ? 'bg-teal-50 text-teal-700'
-                  : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                  ? 'bg-teal-500/10 text-teal-400'
+                  : 'text-gray-400 hover:bg-gray-800 hover:text-white'
               )}
             >
               <span>{icon}</span>

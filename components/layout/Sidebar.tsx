@@ -33,19 +33,19 @@ export default function Sidebar() {
   return (
     <aside
       className={cn(
-        'hidden md:flex flex-col bg-white border-r border-gray-200 py-6 transition-all duration-200',
+        'hidden md:flex flex-col bg-gray-900 border-r border-gray-800 py-6 transition-all duration-200',
         open ? 'w-56' : 'w-14'
       )}
     >
       <div className={cn('flex items-center mb-8', open ? 'px-6 justify-between' : 'px-0 justify-center')}>
         {open && (
-          <span className="text-base font-semibold text-teal-600 leading-tight">
+          <span className="text-base font-semibold text-teal-400 leading-tight">
             Mental Health & Wellbeing
           </span>
         )}
         <button
           onClick={toggle}
-          className="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
+          className="text-gray-500 hover:text-gray-400 transition-colors flex-shrink-0"
           aria-label={open ? 'Collapse sidebar' : 'Expand sidebar'}
         >
           {open ? (
@@ -72,8 +72,8 @@ export default function Sidebar() {
                 'flex items-center rounded-lg text-sm font-medium transition-colors',
                 open ? 'gap-3 px-3 py-2' : 'justify-center px-0 py-2',
                 active
-                  ? 'bg-teal-50 text-teal-700'
-                  : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                  ? 'bg-teal-500/10 text-teal-400'
+                  : 'text-gray-400 hover:bg-gray-800 hover:text-white'
               )}
             >
               <span className="text-base leading-none">{icon}</span>

@@ -68,10 +68,10 @@ export default async function DashboardPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-gray-900">
+        <h1 className="text-2xl font-semibold text-white">
           Good {getTimeOfDay()}, {displayName}
         </h1>
-        <p className="text-gray-500 text-sm mt-1">Here&apos;s your wellness snapshot.</p>
+        <p className="text-gray-400 text-sm mt-1">Here&apos;s your wellness snapshot.</p>
       </div>
 
       <QuickStats
@@ -94,18 +94,18 @@ export default async function DashboardPage() {
         {/* Mood check-in */}
         <Card>
           <CardHeader>
-            <h2 className="font-semibold text-gray-900">Daily Mood Check-in</h2>
+            <h2 className="font-semibold text-white">Daily Mood Check-in</h2>
           </CardHeader>
           <CardContent>
             {alreadyLoggedToday ? (
               <div className="py-2">
-                <p className="text-sm text-gray-500 mb-1">Today&apos;s mood</p>
+                <p className="text-sm text-gray-400 mb-1">Today&apos;s mood</p>
                 <p className="text-3xl font-bold" style={{ color: getMoodColor(lastMood!.score) }}>
                   {lastMood!.score}/10
                 </p>
-                <p className="text-sm text-gray-500 mt-0.5">{getMoodLabel(lastMood!.score)}</p>
+                <p className="text-sm text-gray-400 mt-0.5">{getMoodLabel(lastMood!.score)}</p>
                 {lastMood!.note && (
-                  <p className="text-sm text-gray-600 mt-3 italic">&ldquo;{lastMood!.note}&rdquo;</p>
+                  <p className="text-sm text-gray-400 mt-3 italic">&ldquo;{lastMood!.note}&rdquo;</p>
                 )}
               </div>
             ) : (
@@ -117,28 +117,28 @@ export default async function DashboardPage() {
         {/* Recent journal entries */}
         <Card>
           <CardHeader className="flex items-center justify-between">
-            <h2 className="font-semibold text-gray-900">Recent Journal</h2>
-            <Link href="/journal" className="text-xs text-teal-600 hover:underline">View all</Link>
+            <h2 className="font-semibold text-white">Recent Journal</h2>
+            <Link href="/journal" className="text-xs text-teal-400 hover:underline">View all</Link>
           </CardHeader>
           <CardContent>
             {recentJournal.length > 0 ? (
               <ul className="space-y-3">
                 {recentJournal.map(entry => (
-                  <li key={entry.id} className="border-b border-gray-50 pb-3 last:border-0 last:pb-0">
+                  <li key={entry.id} className="border-b border-gray-800 pb-3 last:border-0 last:pb-0">
                     {entry.prompt_text && (
-                      <p className="text-xs text-teal-600 italic mb-1">&ldquo;{entry.prompt_text}&rdquo;</p>
+                      <p className="text-xs text-teal-400 italic mb-1">&ldquo;{entry.prompt_text}&rdquo;</p>
                     )}
-                    <p className="text-sm text-gray-700 line-clamp-2">{entry.content}</p>
-                    <p className="text-xs text-gray-400 mt-1">{formatDate(entry.created_at)}</p>
+                    <p className="text-sm text-gray-300 line-clamp-2">{entry.content}</p>
+                    <p className="text-xs text-gray-500 mt-1">{formatDate(entry.created_at)}</p>
                   </li>
                 ))}
               </ul>
             ) : (
               <div className="text-center py-6">
                 <p className="text-2xl mb-2">📓</p>
-                <p className="text-sm font-medium text-gray-700 mb-1">No journal entries yet</p>
-                <p className="text-xs text-gray-400 mb-3">Writing regularly helps track your mental health over time.</p>
-                <Link href="/journal" className="text-sm text-teal-600 hover:underline font-medium">Write your first entry →</Link>
+                <p className="text-sm font-medium text-gray-300 mb-1">No journal entries yet</p>
+                <p className="text-xs text-gray-500 mb-3">Writing regularly helps track your mental health over time.</p>
+                <Link href="/journal" className="text-sm text-teal-400 hover:underline font-medium">Write your first entry →</Link>
               </div>
             )}
           </CardContent>
@@ -148,21 +148,21 @@ export default async function DashboardPage() {
       {/* Recent exercises */}
       <Card>
         <CardHeader className="flex items-center justify-between">
-          <h2 className="font-semibold text-gray-900">Recent Activity</h2>
-          <Link href="/exercises" className="text-xs text-teal-600 hover:underline">Browse exercises</Link>
+          <h2 className="font-semibold text-white">Recent Activity</h2>
+          <Link href="/exercises" className="text-xs text-teal-400 hover:underline">Browse exercises</Link>
         </CardHeader>
         <CardContent>
           {recentExercises && recentExercises.length > 0 ? (
-            <ul className="divide-y divide-gray-50">
+            <ul className="divide-y divide-gray-800">
               {recentExercises.map(log => (
                 <li key={log.id} className="py-3 flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-900">{log.exercise_title}</p>
-                    {log.notes && <p className="text-xs text-gray-400 mt-0.5">{log.notes}</p>}
+                    <p className="text-sm font-medium text-white">{log.exercise_title}</p>
+                    {log.notes && <p className="text-xs text-gray-500 mt-0.5">{log.notes}</p>}
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-gray-600">{log.duration_min} min</p>
-                    <p className="text-xs text-gray-400">{formatDate(log.logged_at)}</p>
+                    <p className="text-sm text-gray-400">{log.duration_min} min</p>
+                    <p className="text-xs text-gray-500">{formatDate(log.logged_at)}</p>
                   </div>
                 </li>
               ))}
@@ -170,9 +170,9 @@ export default async function DashboardPage() {
           ) : (
             <div className="text-center py-6">
               <p className="text-2xl mb-2">💪</p>
-              <p className="text-sm font-medium text-gray-700 mb-1">No activity logged yet</p>
-              <p className="text-xs text-gray-400 mb-3">Even a 10-minute walk counts — small steps add up.</p>
-              <Link href="/exercises" className="text-sm text-teal-600 hover:underline font-medium">Browse exercises →</Link>
+              <p className="text-sm font-medium text-gray-300 mb-1">No activity logged yet</p>
+              <p className="text-xs text-gray-500 mb-3">Even a 10-minute walk counts — small steps add up.</p>
+              <Link href="/exercises" className="text-sm text-teal-400 hover:underline font-medium">Browse exercises →</Link>
             </div>
           )}
         </CardContent>

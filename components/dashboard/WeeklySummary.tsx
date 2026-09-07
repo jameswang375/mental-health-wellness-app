@@ -16,12 +16,12 @@ function avg(arr: number[]): number | null {
 }
 
 function DiffBadge({ current, last }: { current: number | null; last: number | null }) {
-  if (last === null || current === null) return <span className="text-xs text-gray-400">—</span>
+  if (last === null || current === null) return <span className="text-xs text-gray-500">—</span>
   const diff = current - last
-  if (diff === 0) return <span className="text-xs text-gray-400">→ same</span>
+  if (diff === 0) return <span className="text-xs text-gray-500">→ same</span>
   const positive = diff > 0
   return (
-    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${positive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'}`}>
+    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${positive ? 'bg-green-500/15 text-green-400' : 'bg-red-500/15 text-red-400'}`}>
       {positive ? '+' : ''}{typeof current === 'number' && typeof last === 'number' && !Number.isInteger(diff) ? diff.toFixed(1) : diff} {positive ? '😊' : '😔'}
     </span>
   )
@@ -65,15 +65,15 @@ export default function WeeklySummary({
   return (
     <Card>
       <CardHeader>
-        <h2 className="font-semibold text-gray-900">This Week vs Last Week</h2>
+        <h2 className="font-semibold text-white">This Week vs Last Week</h2>
       </CardHeader>
       <CardContent className="p-0">
-        <div className="divide-y divide-gray-50">
+        <div className="divide-y divide-gray-800">
           {rows.map(row => (
             <div key={row.label} className="px-6 py-3 flex items-center justify-between">
-              <span className="text-sm text-gray-600">{row.label}</span>
+              <span className="text-sm text-gray-400">{row.label}</span>
               <div className="flex items-center gap-3">
-                <span className="text-sm font-semibold text-gray-900">{row.thisValue}</span>
+                <span className="text-sm font-semibold text-white">{row.thisValue}</span>
                 <DiffBadge current={row.diffCurrent} last={row.diffLast} />
               </div>
             </div>

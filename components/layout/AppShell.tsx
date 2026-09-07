@@ -17,7 +17,7 @@ export default function AppShell({
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-teal-950">
       <Sidebar />
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
       <div className="flex flex-col flex-1 overflow-hidden">

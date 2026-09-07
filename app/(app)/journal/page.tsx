@@ -20,15 +20,15 @@ export default async function JournalPage() {
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-gray-900">Journal</h1>
-        <p className="text-gray-500 text-sm mt-1">
+        <h1 className="text-2xl font-semibold text-white">Journal</h1>
+        <p className="text-gray-400 text-sm mt-1">
           A private space to reflect. Your entries are only visible to you.
         </p>
       </div>
 
       <Card>
         <CardHeader>
-          <h2 className="font-semibold text-gray-900">New Entry</h2>
+          <h2 className="font-semibold text-white">New Entry</h2>
         </CardHeader>
         <CardContent>
           <NewEntryForm prompts={(prompts as JournalPrompt[]) ?? []} />
@@ -37,13 +37,13 @@ export default async function JournalPage() {
 
       {entries && entries.length > 0 && (
         <div className="space-y-4">
-          <h2 className="font-semibold text-gray-900">Past Entries</h2>
+          <h2 className="font-semibold text-white">Past Entries</h2>
           <JournalList entries={entries as JournalEntry[]} />
         </div>
       )}
 
       {(!entries || entries.length === 0) && (
-        <p className="text-center text-sm text-gray-400 py-8">
+        <p className="text-center text-sm text-gray-500 py-8">
           Your journal entries will appear here.
         </p>
       )}

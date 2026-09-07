@@ -32,7 +32,7 @@ export default function MoodCheckIn() {
   if (done) {
     return (
       <div className="text-center py-4">
-        <p className="text-teal-600 font-medium">Mood logged — keep it up!</p>
+        <p className="text-teal-400 font-medium">Mood logged — keep it up!</p>
       </div>
     )
   }
@@ -41,7 +41,7 @@ export default function MoodCheckIn() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <div className="flex items-center justify-between mb-2">
-          <label className="text-sm font-medium text-gray-700">How are you feeling?</label>
+          <label className="text-sm font-medium text-gray-300">How are you feeling?</label>
           <span className="text-sm font-semibold" style={{ color: getMoodColor(score) }}>
             {score}/10 — {getMoodLabel(score)}
           </span>
@@ -54,7 +54,7 @@ export default function MoodCheckIn() {
           onChange={e => setScore(Number(e.target.value))}
           className="w-full accent-teal-600"
         />
-        <div className="flex justify-between text-xs text-gray-400 mt-1">
+        <div className="flex justify-between text-xs text-gray-500 mt-1">
           <span>Very Low</span>
           <span>Excellent</span>
         </div>
@@ -64,9 +64,9 @@ export default function MoodCheckIn() {
         onChange={e => setNote(e.target.value)}
         rows={2}
         placeholder="Anything on your mind? (optional)"
-        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+        className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
       />
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-red-400">{error}</p>}
       <Button type="submit" disabled={loading}>
         {loading ? 'Logging…' : 'Log Mood'}
       </Button>

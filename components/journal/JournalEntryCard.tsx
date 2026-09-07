@@ -31,20 +31,20 @@ export default function JournalEntryCard({ entry }: JournalEntryCardProps) {
     <Card>
       <CardContent className="pt-5">
         {entry.prompt_text && (
-          <p className="text-xs text-teal-600 font-medium mb-2 italic">
+          <p className="text-xs text-teal-400 font-medium mb-2 italic">
             &ldquo;{entry.prompt_text}&rdquo;
           </p>
         )}
-        <p className={`text-sm text-gray-700 leading-relaxed ${expanded ? '' : 'line-clamp-4'}`}>
+        <p className={`text-sm text-gray-300 leading-relaxed ${expanded ? '' : 'line-clamp-4'}`}>
           {entry.content}
         </p>
         <div className="flex items-center justify-between mt-3">
           <div className="flex items-center gap-3">
-            <span className="text-xs text-gray-400">{formatDate(entry.created_at)}</span>
+            <span className="text-xs text-gray-500">{formatDate(entry.created_at)}</span>
             {entry.content.length > 200 && (
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="text-xs text-teal-600 hover:underline"
+                className="text-xs text-teal-400 hover:underline"
               >
                 {expanded ? 'Show less' : 'Read more'}
               </button>
@@ -53,7 +53,7 @@ export default function JournalEntryCard({ entry }: JournalEntryCardProps) {
           <button
             onClick={handleDelete}
             disabled={deleting}
-            className="text-xs text-gray-400 hover:text-red-500 transition-colors disabled:opacity-50"
+            className="text-xs text-gray-500 hover:text-red-400 transition-colors disabled:opacity-50"
           >
             {deleting ? 'Deleting…' : 'Delete'}
           </button>

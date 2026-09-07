@@ -20,10 +20,10 @@ export default function TopBar({ user, onMenuClick }: TopBarProps) {
   }
 
   return (
-    <header className="h-14 bg-white border-b border-gray-200 px-4 flex items-center justify-between">
+    <header className="h-14 bg-gray-900 border-b border-gray-800 px-4 flex items-center justify-between">
       <button
         onClick={onMenuClick}
-        className="md:hidden text-gray-500 hover:text-gray-800 transition-colors p-1"
+        className="md:hidden text-gray-400 hover:text-gray-200 transition-colors p-1"
         aria-label="Open menu"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -31,15 +31,15 @@ export default function TopBar({ user, onMenuClick }: TopBarProps) {
         </svg>
       </button>
 
-      <span className="md:hidden absolute left-1/2 -translate-x-1/2 text-sm font-semibold text-teal-600">
+      <span className="md:hidden absolute left-1/2 -translate-x-1/2 text-sm font-semibold text-teal-400">
         Mental Health & Wellbeing
       </span>
 
       <div className="flex items-center gap-4 ml-auto">
-        <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
+        <span className="text-sm text-gray-400 hidden sm:block">{user.email}</span>
         <button
           onClick={handleSignOut}
-          className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          className="text-sm text-gray-400 hover:text-white transition-colors"
         >
           Sign out
         </button>

@@ -56,30 +56,30 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-white flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-teal-950 flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <Link href="/" className="text-2xl font-semibold text-teal-600">Mental Health & Wellbeing</Link>
-          <p className="text-gray-500 mt-2 text-sm">Welcome back</p>
+          <Link href="/" className="text-2xl font-semibold text-teal-400">Mental Health & Wellbeing</Link>
+          <p className="text-gray-400 mt-2 text-sm">Welcome back</p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8">
+        <div className="bg-gray-900 rounded-2xl border border-gray-800 shadow-sm p-8">
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Email</label>
               <input
                 type="email"
                 required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="you@example.com"
               />
             </div>
             <div>
               <div className="flex items-center justify-between mb-1">
-                <label className="block text-sm font-medium text-gray-700">Password</label>
-                <Link href="/forgot-password" className="text-xs text-teal-600 hover:underline">
+                <label className="block text-sm font-medium text-gray-300">Password</label>
+                <Link href="/forgot-password" className="text-xs text-teal-400 hover:underline">
                   Forgot password?
                 </Link>
               </div>
@@ -88,13 +88,13 @@ export default function LoginPage() {
                 required
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="••••••••"
               />
             </div>
 
             {error && (
-              <p className="text-sm text-red-600 bg-red-50 rounded-lg px-3 py-2">{error}</p>
+              <p className="text-sm text-red-400 bg-red-500/10 rounded-lg px-3 py-2">{error}</p>
             )}
 
             <Button type="submit" disabled={loading} className="w-full" size="lg">
@@ -104,27 +104,27 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-4 flex items-center gap-3">
-          <div className="flex-1 h-px bg-gray-200" />
-          <span className="text-xs text-gray-400">or</span>
-          <div className="flex-1 h-px bg-gray-200" />
+          <div className="flex-1 h-px bg-gray-700" />
+          <span className="text-xs text-gray-500">or</span>
+          <div className="flex-1 h-px bg-gray-700" />
         </div>
 
         <button
           onClick={handleDemo}
           disabled={demoLoading}
-          className="mt-4 w-full rounded-xl border-2 border-dashed border-teal-300 bg-teal-50 hover:bg-teal-100 transition-colors py-3 text-sm font-medium text-teal-700 disabled:opacity-60"
+          className="mt-4 w-full rounded-xl border-2 border-dashed border-teal-500/40 bg-teal-500/10 hover:bg-teal-500/15 transition-colors py-3 text-sm font-medium text-teal-400 disabled:opacity-60"
         >
-          {demoLoading ? 'Starting demo…' : '✨ Try the demo — no account needed'}
+          {demoLoading ? 'Starting demo…' : 'Try the demo — no account needed'}
         </button>
 
-        <p className="text-center text-sm text-gray-500 mt-6">
+        <p className="text-center text-sm text-gray-400 mt-6">
           No account?{' '}
-          <Link href="/signup" className="text-teal-600 hover:underline font-medium">
+          <Link href="/signup" className="text-teal-400 hover:underline font-medium">
             Sign up free
           </Link>
         </p>
         <p className="text-center mt-3">
-          <Link href="/" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
+          <Link href="/" className="text-sm text-gray-500 hover:text-gray-400 transition-colors">
             ← Back to home
           </Link>
         </p>

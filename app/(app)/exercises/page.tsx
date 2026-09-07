@@ -21,8 +21,8 @@ export default async function ExercisesPage({ searchParams }: ExercisesPageProps
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-gray-900">Exercises</h1>
-        <p className="text-gray-500 text-sm mt-1">
+        <h1 className="text-2xl font-semibold text-white">Exercises</h1>
+        <p className="text-gray-400 text-sm mt-1">
           Physical and mental exercises grounded in evidence-based practice.
         </p>
       </div>
@@ -38,7 +38,7 @@ export default async function ExercisesPage({ searchParams }: ExercisesPageProps
           ))}
         </div>
       ) : (
-        <p className="text-gray-400 text-sm py-12 text-center">No exercises found.</p>
+        <p className="text-gray-500 text-sm py-12 text-center">No exercises found.</p>
       )}
     </div>
   )

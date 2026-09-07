@@ -60,27 +60,27 @@ export default function OnboardingModal({ show }: OnboardingModalProps) {
       }`}
     >
       {visible && (
-        <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl">
+        <div className="bg-gray-900 rounded-2xl p-8 max-w-md w-full shadow-2xl">
           {step === 1 && (
             <div className="space-y-5">
               <div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-1">Welcome! 👋</h2>
-                <p className="text-sm text-gray-500">Let&apos;s set up your profile so we can personalise your experience.</p>
+                <h2 className="text-xl font-semibold text-white mb-1">Welcome! 👋</h2>
+                <p className="text-sm text-gray-400">Let&apos;s set up your profile so we can personalise your experience.</p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">What should we call you?</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1">What should we call you?</label>
                 <input
                   type="text"
                   value={name}
                   onChange={e => setName(e.target.value)}
                   placeholder="Your name"
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full bg-gray-900 text-white placeholder:text-gray-500 border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
               <div className="flex items-center justify-between">
                 <button
                   onClick={dismiss}
-                  className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-sm text-gray-500 hover:text-gray-400 transition-colors"
                 >
                   Skip for now
                 </button>
@@ -97,8 +97,8 @@ export default function OnboardingModal({ show }: OnboardingModalProps) {
           {step === 2 && (
             <div className="space-y-5">
               <div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-1">Your wellness goals</h2>
-                <p className="text-sm text-gray-500">Select all that apply. You can change these anytime.</p>
+                <h2 className="text-xl font-semibold text-white mb-1">Your wellness goals</h2>
+                <p className="text-sm text-gray-400">Select all that apply. You can change these anytime.</p>
               </div>
               <div className="flex flex-wrap gap-2">
                 {GOAL_OPTIONS.map(goal => (
@@ -109,7 +109,7 @@ export default function OnboardingModal({ show }: OnboardingModalProps) {
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                       goals.includes(goal)
                         ? 'bg-teal-600 text-white'
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
                     }`}
                   >
                     {goal}
@@ -119,7 +119,7 @@ export default function OnboardingModal({ show }: OnboardingModalProps) {
               <div className="flex items-center justify-between">
                 <button
                   onClick={dismiss}
-                  className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-sm text-gray-500 hover:text-gray-400 transition-colors"
                 >
                   Skip for now
                 </button>
