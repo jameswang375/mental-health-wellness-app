@@ -4,9 +4,9 @@ import AccountDeletedBanner from '@/components/AccountDeletedBanner'
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-teal-950">
+    <main className="min-h-screen bg-gray-950">
       <AccountDeletedBanner />
-      <nav className="fade-in-up flex items-center justify-between px-8 py-5 max-w-6xl mx-auto">
+      <nav className="flex items-center justify-between px-8 py-5 max-w-6xl mx-auto">
         <span className="text-xl font-semibold text-teal-400">Mental Health Wellness App</span>
         <div className="flex items-center gap-4">
           <Link href="/login" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -20,27 +20,20 @@ export default function LandingPage() {
       </nav>
 
       <section className="max-w-3xl mx-auto text-center px-8 pt-24 pb-20">
-        <h1
-          className="fade-in-up text-5xl font-bold text-white leading-tight mb-6"
-          style={{ animationDelay: '100ms' }}
-        >
+        <h1 className="text-5xl font-bold text-white leading-tight mb-6">
           Your mental and physical
-          <span className="text-teal-400"> wellbeing</span>, grounded in science
+           wellbeing, grounded in science
         </h1>
-        <p
-          className="fade-in-up text-xl text-gray-400 mb-10 leading-relaxed"
-          style={{ animationDelay: '200ms' }}
-        >
+        <p className="text-xl text-gray-400 mb-10 leading-relaxed">
           Evidence-based exercises, CBT tools, and research-backed education. All in one place.
-          Real techniques. Real Sources. Not intended to be a replacement for psychotherapy.
         </p>
-        <div className="fade-in-up" style={{ animationDelay: '300ms' }}>
+        <div>
           <TryDemoButton
             label="Try the demo, no account needed"
             className="bg-teal-500 text-white text-lg px-8 py-4 rounded-xl hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20 disabled:opacity-60"
           />
         </div>
-        <p className="fade-in-up text-sm text-gray-500 mt-4" style={{ animationDelay: '350ms' }}>
+        <p className="text-sm text-gray-500 mt-4">
           or{' '}
           <Link href="/signup" className="text-teal-400 hover:underline">
             create a free account
@@ -62,11 +55,10 @@ export default function LandingPage() {
             title: 'Progress',
             body: "Track your mood over time, log your exercise, and write in your private journal to see how far you've come.",
           },
-        ].map(({ title, body }, i) => (
+        ].map(({ title, body }) => (
           <div
             key={title}
-            className="fade-in-up bg-gray-900/60 rounded-xl border border-gray-800 p-6 backdrop-blur-sm"
-            style={{ animationDelay: `${400 + i * 100}ms` }}
+            className="bg-gray-900/60 rounded-xl border border-gray-800 p-6 backdrop-blur-sm"
           >
             <h3 className="font-semibold text-white mb-2">{title}</h3>
             <p className="text-sm text-gray-400">{body}</p>
