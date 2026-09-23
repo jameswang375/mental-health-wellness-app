@@ -12,7 +12,3 @@ Mental health data is among the most sensitive personal data that exists. Every 
 - **Server Actions** for all mutations.
 - **Row Level Security** on all user tables. Users can only read and write their own data.
 - **Middleware** for route protection. Unauthenticated users are redirected before any page renders.
-
-
-## Preview of Dashboard
-![Dashboard](./public/app-dashboard.png)
